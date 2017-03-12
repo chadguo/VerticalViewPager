@@ -53,7 +53,7 @@ public class VerticalVPOnTouchListener implements View.OnTouchListener {
                 Log.e(TAG, "scrollX " + dummyViewPager.getScrollX() + ",basescrollX " + dummyViewPager.getBaseScrollX());
 
                 if (dummyViewPager.getScrollX() != dummyViewPager.getBaseScrollX()) {
-                    if (fakeDragVp(v, e, diff)) return false;
+                    if (fakeDragVp(v, e, diff)) return true;
                 } else {
                     if (ViewCompat.canScrollVertically(v, (-diff) > 0 ? 1 : -1)) {
                         Log.e(TAG, "scroll vertically  " + diff + ", move.lastMotionY " + e.getY());
@@ -62,7 +62,7 @@ public class VerticalVPOnTouchListener implements View.OnTouchListener {
                         dummyViewPager.beginFakeDrag();
                         fakeDragVp(v, e, diff);
                         adjustDownMotion(v, e);
-                        return false;
+                        return true;
                     }
                 }
 
@@ -80,7 +80,7 @@ public class VerticalVPOnTouchListener implements View.OnTouchListener {
                 break;
         }
 
-        return v.onTouchEvent(e);
+        return false;
     }
 
     private boolean fakeDragVp(View v, MotionEvent e, float diff) {
