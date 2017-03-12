@@ -15,7 +15,7 @@ import java.io.Serializable;
  */
 public class DummyViewPager extends ViewPager implements Serializable {
 
-    private static final String TAG = "VerticalViewPager";
+    private static final String TAG = "DummyViewPager";
     private int baseScrollX;
 
     public DummyViewPager(Context context) {
