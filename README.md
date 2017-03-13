@@ -9,7 +9,7 @@ An vertically scrollable ViewPager implementation.
 
 ## How does it work?
 
-Use ViewPager's fake drag feature and View.OnTouchListener to manage the touch event. Works well with RecyclerView and ListView, though i havn't test it with other View, but i believe it will work too. Feel free to use it with other View.
+Use ViewPager's fake drag feature and View.OnTouchListener to manage the touch event. Works well with RecyclerView and ListView, currently not support TextView or ImageView as child directly, but you can put everything into RecyclerView and ListView.
 
 Implementation:
   * DummyViewPager override the onInterceptTouchEvent method and return false, dispatch touch events to it's children;
@@ -19,8 +19,8 @@ I build my project base on [kaelaela/VerticalViewPager](https://github.com/kaela
 
 ## Next:
 
+- [ ] Support TextView/ImageView as child directly;
 - [ ] Add more examples;
-- [ ] Better ReadMe;
 
 ## Me
 
