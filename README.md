@@ -13,6 +13,7 @@ In the latest work, we need a vertical scrollable ViewPager, and Android ViewPag
 
 
 Use ViewPager's fake drag feature and View.OnTouchListener to manage the touch event. 
+
 Implementation:
 
   * DummyViewPager override the onInterceptTouchEvent method and return false, dispatch touch events to it's children;
