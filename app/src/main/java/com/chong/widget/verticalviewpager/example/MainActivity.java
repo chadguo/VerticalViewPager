@@ -10,6 +10,7 @@ import com.chong.widget.verticalviewpager.example.adapter.ContentFragmentAdapter
 
 
 public class MainActivity extends AppCompatActivity {
+    DummyViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViewPager() {
-        final DummyViewPager viewPager = (DummyViewPager) findViewById(R.id.vertical_viewpager);
+        viewPager = (DummyViewPager) findViewById(R.id.vertical_viewpager);
 //        viewPager.setPageTransformer(false, new ZoomOutTransformer());
 //        viewPager.setPageTransformer(true, new StackTransformer());
         String title = "ContentFragment";
@@ -33,5 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 .set());
         //If you setting other scroll mode, the scrolled fade is shown from either side of display.
         viewPager.setOverScrollMode(View.OVER_SCROLL_ALWAYS);
+    }
+
+    @Override
+    public void onBackPressed() {
+        viewPager.setCurrentItem(0, false);
     }
 }
