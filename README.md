@@ -6,6 +6,8 @@ A vertical scrollable ViewPager implementation.Works well with RecyclerView and 
 
 In the latest work, we need a vertical scrollable ViewPager, and Android ViewPager only support horizontal scroll, there are already some work such as [kaelaela/VerticalViewPager](https://github.com/kaelaela/VerticalViewPager) and [DragScrollDetailsLayout](https://github.com/happylishang/DragScrollDetailsLayout), but they are not meet our conditions. So I figure out an implementation and build this project.
 
+We use this on WeChat Canvas Ads.
+
 ## Screenshots
 ![default](screenshots/demo1.gif) ![default](screenshots/demo2.gif) 
 
@@ -35,5 +37,6 @@ Chad Guo
 
 License
 -------
-Please [LICENSE](https://github.com/guochong/VerticalViewPager-chad/blob/master/LICENSE)。
+Please [LICENSE](https://github.com/guochong/VerticalViewPager-chad/blob/master/LICENSE).
+
 Please let me know if you use this project, tks.
