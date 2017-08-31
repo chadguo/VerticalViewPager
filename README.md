@@ -36,3 +36,4 @@ Chad Guo
 License
 -------
 Please [LICENSE](https://github.com/guochong/VerticalViewPager-chad/blob/master/LICENSE)。
+Please let me know if you use this project, tks.
