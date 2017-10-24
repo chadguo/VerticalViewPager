@@ -5,8 +5,9 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 
-import com.chong.widget.verticalviewpager.transforms.DefaultTransformer;
+import com.chong.widget.verticalviewpager.transforms.DefaultVerticalPageTransformer;
 
 import java.io.Serializable;
 
@@ -19,6 +20,7 @@ public class DummyViewPager extends ViewPager implements Serializable {
     private static final String TAG = "DummyViewPager";
     private int baseScrollX;
     private int currentScrollState;
+    private int scrollOrientation = View.SCROLL_AXIS_VERTICAL;
 
     public DummyViewPager(Context context) {
         this(context, null);
@@ -26,7 +28,7 @@ public class DummyViewPager extends ViewPager implements Serializable {
 
     public DummyViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPageTransformer(false, new DefaultTransformer());// vertical scroll trick
+        setPageTransformer(false, new DefaultVerticalPageTransformer());// vertical scroll trick
         addOnPageChangeListener(new SimpleOnPageChangeListener() {
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -39,6 +41,8 @@ public class DummyViewPager extends ViewPager implements Serializable {
         });
 
     }
+
+
 
 
     public int getBaseScrollX() {
